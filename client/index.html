@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullstack todo practice</title>
+    <script src="https://kit.fontawesome.com/c54ad325ac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>todos</h1>
+    <form action="/todos" method="post" target="_blank">
+        <label for="name">todo</label>
+        <input type="text" id="name" name="name" placeholder="what is there to do?" required>
+        <button type="submit">add todo</button>
+    </form>
+    <div class="todos"></div>
+    <script src="index.js" defer></script>
+</body>
+</html>
