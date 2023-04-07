@@ -27,7 +27,7 @@ app.get("/todos/:id", async (req, res) => {
   res.json(todo.rows);
 });
 app.post("/todos", (req, res) => {
-  pool.query("INSERT INTO todos (name) VALUES ($1) RETURNING *", [
+  pool.query("INSERT INTO todos (name) VALUES ($1)", [
     req.body.name,
   ]);
   res.json({ message: "success" });
