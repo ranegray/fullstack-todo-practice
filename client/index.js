@@ -43,7 +43,7 @@ const getTodos = async () => {
       submit.classList.add("fa-solid");
       submit.classList.add("fa-check");
       submit.addEventListener("click", async () => {
-        await setTodo(newInput.value, `/todos/${todo.id}`, "PATCH");
+        await setTodo(newInput.value, `https://todoapi-j5ib.onrender.com/todos/${todo.id}`, "PATCH");
         getTodos();
       });
 
@@ -86,6 +86,6 @@ const setTodo = async (value, path, method) => {
 
 submit.addEventListener("click", async (event) => {
   event.preventDefault();
-  await setTodo(event.target.form[0].value, "/todos", "POST");
+  await setTodo(event.target.form[0].value, "https://todoapi-j5ib.onrender.com/todos", "POST");
   await getTodos();
 });
