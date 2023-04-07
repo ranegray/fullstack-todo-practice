@@ -12,7 +12,7 @@ const app = express();
 const pool = new Pool({ connectionString });
 
 app.use(cors());
-app.use(express.static("client"));
+// app.use(express.static("client"));
 app.use(express.json());
 
 app.get("/", (req, res) => {});

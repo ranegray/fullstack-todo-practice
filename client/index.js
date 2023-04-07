@@ -2,7 +2,7 @@ const todosContainer = document.querySelector(".todos");
 const submit = document.querySelector("button");
 
 const getTodos = async () => {
-  const todos = await fetch("/todos").then((response) => response.json());
+  const todos = await fetch("https://todoapi-j5ib.onrender.com/todos").then((response) => response.json());
 
   todosContainer.innerHTML = "";
   todos.map((todo) => {
@@ -20,7 +20,7 @@ const getTodos = async () => {
       todoLabel.classList.toggle("strikethrough");
 
       setTimeout(() => {
-        fetch(`/todos/${todo.id}`, {
+        fetch(`https://todoapi-j5ib.onrender.com/todos/${todo.id}`, {
           method: "DELETE",
         }).then((response) => response.json());
         todoDiv.classList.add("hidden");
