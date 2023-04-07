@@ -5,6 +5,7 @@ import pg from "pg";
 const { Pool } = pg;
 dotenv.config();
 const connectionString = process.env.DATABASE_URL;
+const port = process.env.PORT || 3000
 
 const app = express();
 
@@ -47,6 +48,6 @@ app.get("/*", (req, res) => {
   res.json({ message: "Not found" });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Server runnnig on http://localhost:3000");
 });
